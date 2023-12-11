@@ -1,0 +1,17 @@
+{
+  "reference":"ABCD123456",
+  "parcels" : [
+    {
+      "weight":1,
+      "width": 10,
+      "height": 10,
+      "length": 10
+    },
+    {
+      "weight":2,
+      "width": 20,
+      "height": 20,
+      "length": 20
+    }
+  ]
+}

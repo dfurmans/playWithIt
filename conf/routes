@@ -1,0 +1,19 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# https://www.playframework.com/documentation/latest/ScalaRouting
+# ~~~~
+
+# An example controller showing a sample home page
+GET     /                           controllers.HomeController.index()
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
+
+# The application should be able to receive a POST http://localhost:8085/api/register with payload (store it as a shipment):
+POST    /api/register               controllers.ShipmentController.register
+# The application should be able to receive a PUT http://localhost:8085/api/push with the following payloads (tracking):
+PUT     /api/push                   controllers.TrackingController.tracking
+
+# MYs
+GET    /api/shipment/find/:refNumber         controllers.ShipmentController.find(refNumber: String)
+GET    /api/tracking/find/:refNumber         controllers.TrackingController.find(refNumber: String)
